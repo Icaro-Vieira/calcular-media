@@ -9,11 +9,14 @@ function Calcular() {
     Result.innerHTML = "Nota da Média: ";
 
     if (Nota1 == "" || Nota2 == "" || Nota1 < 0 || Nota2 < 0) {
-        alert("Campo Vazio ou Nota Invalida!");
+    alert("Campo Vazio ou Nota Invalida!");
     } else {
-        let NotaFinal = 0;
-        NotaFinal = (n1 + (2 * n2)) / 3;
-        Result.innerHTML += ` ${((n1 + 2 * n2) / 3).toFixed(1)}`; 
+      let NotaFinal = 0;
+      NotaFinal = (n1 + 2 * n2) / 3;
+      if (Number.isInteger(NotaFinal)) {
+        Result.innerHTML += ` ${NotaFinal.toFixed(0)}`;
+    } else {
+        Result.innerHTML += ` ${NotaFinal.toFixed(1)}`;
     }
    
 }
