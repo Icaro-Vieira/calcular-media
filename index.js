@@ -13,7 +13,7 @@ function Calcular() {
     } else {
         let NotaFinal = 0;
         NotaFinal = (n1 + (2 * n2)) / 3;
-        Result.innerHTML += ` ${Math.round(NotaFinal)}`; 
+        Result.innerHTML += ` ${((n1 + 2 * n2) / 3).toFixed(1)}`; 
     }
    
 }
